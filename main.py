@@ -38,7 +38,7 @@ if __name__ == '__main__':
 
 
     for x in range(0, len(alpha)):
-        print(f" alpha_t({x})  |", end = "")
+        print(f" alpha_t({x+1})  |", end = "")
     print("\n", "______________ " *len(alpha[0]))
     for x in alpha:
         for y in x:
