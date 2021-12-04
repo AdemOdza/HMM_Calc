@@ -33,7 +33,7 @@ if __name__ == '__main__':
             var = 0
             for j in range(0, len(a[0])):
                 var += float(a[j][i] * alpha[ x -1][j])
-            curr.append(va r *b[i][sequence[x] - 1])
+            curr.append(var * b[i][sequence[x] - 1])
         alpha.append(curr)
 
 
