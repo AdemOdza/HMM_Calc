@@ -58,20 +58,24 @@ def delta(a, b, pi, sequence):
 if __name__ == '__main__':
     # Transition properties
     # a[i][j] = probability of traveling to state j from state i
-    a = [[0.5, 0.2, 0.3],
-         [0.1, 0.6, 0.3],
-         [0.2, 0.4, 0.4]]
+    a = [[0.3, 0.3, 0.4],
+         [0.2, 0.7, 0.1],
+         [0.2, 0.5, 0.3]]
 
     # Emission probabilities
     # b[i][x] = Probability of emitting output x at state i
-    b = [[0.2, 0.7, 0.1],
-         [0.4, 0.4, 0.2],
-         [0.7, 0.1, 0.2]]
+    b = [[0.1, 0.0, 0.9],
+         [0.3, 0.4, 0.3],
+         [0.7, 0.2, 0.1]]
 
     # pi[i] = Probability of starting at state i
-    pi = [0.5, 0.4, 0.1]
+    pi = [0.2, 0.5, 0.3]
 
     # Observed output sequence
-    sequence = [1, 2, 3, 1]
-    #alpha_table = alpha(a, b, pi, sequence)
+    sequence = [1, 2, 3, 1, 1, 4]
+
+    #  Prints alpha table and returns matrix
+    alpha_table = alpha(a, b, pi, sequence)
+
+    # Prints delta table and returns matrix
     delta_table = delta(a, b, pi, sequence)
